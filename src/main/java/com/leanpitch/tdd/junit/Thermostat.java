@@ -33,6 +33,10 @@ public class Thermostat {
 	public void setDesiredTemperature(float desiredTemperature) {
 		this.desiredTemperature = desiredTemperature;
 	}
+	
+	public boolean isSwitchOn(){
+		return heatSwitch.equals(Switch.ON);
+	}
 
 }
 

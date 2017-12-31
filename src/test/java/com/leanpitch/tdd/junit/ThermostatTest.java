@@ -48,5 +48,15 @@ public class ThermostatTest {
 		thermostat.setDesiredTemperature(56.00F);
 		assertEquals(56.00F, thermostat.getDesiredTemperature(),0);
 	}
+	
+	@Test
+	public void testIsSwitchOn(){
+		thermostat.setDesiredTemperature(98.00F);
+		thermostat.increaseCurrTemperature(56.00F);
+		assertTrue(thermostat.isSwitchOn());
+		thermostat.increaseCurrTemperature(56.00F);
+		assertFalse(thermostat.isSwitchOn());
+		
+	}
 
 }
